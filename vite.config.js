@@ -14,20 +14,18 @@ export default defineConfig({
   },
   build: {
     minify: true,
+    sourcemap: true, // Enable sourcemaps for debugging
     manifest: true,
     outDir: 'build',
     rollupOptions: {
-      input: './src/main.jsx',
+      input: './index.html', // Ensure it points to index.html
       output: {
-        format: 'umd',
+        format: 'es', // Use ES module format
         entryFileNames: 'main.js',
-        esModule: false,
         compact: true,
-        globals: {
-          jquery: '$',
-        },
+        globals: {},
       },
-      external: ['jquery'],
+      external: [],
     },
   },
 });
