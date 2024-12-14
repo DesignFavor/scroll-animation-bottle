@@ -97,7 +97,7 @@ export default function App() {
 
           <Float floatIntensity={2} speed={2} rotationIntensity={0.5}>
             <Model
-              url="/model/black.glb"
+              url="https://bttle.netlify.app/model/black.glb"
               targetPosition={modelState.position}
               targetRotation={modelState.rotation}
             />
@@ -111,7 +111,7 @@ export default function App() {
             opacity={0.75}
           />
 
-          <Environment files="/ShowcaseEnvy.hdr" />
+          <Environment files="https://bttle.netlify.app/ShowcaseEnvy.hdr" />
 
           <Rig />
         </Canvas>
