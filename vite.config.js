@@ -6,28 +6,27 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: 'localhost',
-    cors: '*',
+    cors: {
+      origin: '*', // Allow all origins
+    },
     hmr: {
       host: 'localhost',
       protocol: 'ws',
     },
   },
   build: {
-    minify: true,
+    outDir: 'build', // Output folder
+    emptyOutDir: true, // Clears the folder during rebuild
+    minify: true, // Minify the output
     sourcemap: true, // Enable sourcemaps for debugging
-    manifest: true,
-    outDir: 'build',
+    manifest: true, // Generate a manifest file
     rollupOptions: {
-      input: './index.html', // Ensure it points to index.html
+      input: './index.html', // Entry point
       output: {
-        format: 'es', // Use ES module format
-        entryFileNames: 'main.js',
+        entryFileNames: 'main.js', // Ensure the file is named main.js
+        format: 'es', // ES Module format
         compact: true,
-        globals: {},
       },
-      external: [
-        '/build/main.js', // Mark main.js as external
-      ],
     },
   },
 });
