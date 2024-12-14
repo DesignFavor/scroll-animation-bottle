@@ -1,2 +1,3 @@
 /*
-Access-Control-Allow-Origin: https://pfannenstielhof-weingut.webflow.io/wein-einzel
+  Access-Control-Allow-Origin: https://pfannenstielhof-weingut.webflow.io
+  Access-Control-Allow-Methods: GET
