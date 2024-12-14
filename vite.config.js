@@ -25,7 +25,9 @@ export default defineConfig({
         compact: true,
         globals: {},
       },
-      external: [],
+      external: [
+        '/build/main.js', // Mark main.js as external
+      ],
     },
   },
 });
